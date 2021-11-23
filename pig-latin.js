@@ -7,5 +7,5 @@ const pigLatin = (strings) =>{
   return result;
 };
 
-const args = process.argv;
-console.log(pigLatin(args.slice(2)));
+const args = process.argv.slice(2);
+console.log(pigLatin(args));
