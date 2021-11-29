@@ -29,7 +29,7 @@ const eqObjects = function (object1, object2) {
           return false;
         } else if (object1[i] === object2[j]) {
           return true;
-        } 
+        }
       }
     }
   }
@@ -44,8 +44,8 @@ assertEqual(eqObjects(ab, ba), true);
 const abc = { a: "1", b: "2", c: "3" };
 assertEqual(eqObjects(ab, abc), false);
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
+const cd = { c: "1", d: ["2", 3] }; // no. of keys:2 , has an array: yes
+const dc = { d: ["2", 3], c: "1" }; // no. of keys:2 , has an array: yes
 assertEqual(eqObjects(cd, dc), true); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
@@ -59,6 +59,6 @@ assertEqual(eqObjects(ef, gh), true);
 const fe = { b: [3, 4], a: [2, 1, 4] };
 assertEqual(eqObjects(ef, fe), false);
 
-const obj1 = {a: [1,2,3]};
-const obj2 = {a: [1,2,3]};
+const obj1 = { a: [1, 2, 3] };
+const obj2 = { a: [1, 2, 3] };
 assertEqual(eqObjects(obj1, obj2), true);
