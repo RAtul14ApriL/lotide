@@ -13,17 +13,17 @@ const pigLatin = require('./pigLatin');
 const tail = require('./tail');
 
 module.exports = {
-  countLetter: countLetter,
-  countOnly: countOnly,
-  findKey: findKey,
-  findKeyByValue: findKeyByValue,
-  flatten: flatten,
-  head: head,
-  letterPositions: letterPositions,
-  loopyLighthouse: loopyLighthouse,
-  map: map,
-  middle: middle,
-  passwordObfuscator: passwordObfuscator,
-  pigLatin: pigLatin,
-  tail: tail
+  countLetter,
+  countOnly,
+  findKey,
+  findKeyByValue,
+  flatten,
+  head,
+  letterPositions,
+  loopyLighthouse,
+  map,
+  middle,
+  passwordObfuscator,
+  pigLatin,
+  tail
 }
