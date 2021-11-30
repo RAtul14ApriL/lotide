@@ -1,7 +1,16 @@
-const eqArrays = require('../eqArrays');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-console.log(eqArrays(tail([5, 6, 7]), [6, 7]));
-console.log(eqArrays(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]));
-console.log(eqArrays(tail([5, 6, 7]), [5, 6]));
-console.log(eqArrays(tail([]), []));
+describe("#tail", () => {
+  it('returns [2, 3] for [1, 2, 3]', () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
+
+  it('returns [5, 3] for [7, 5, 3]', () => {
+    assert.deepEqual(tail([7, 5, 3]), [5, 3]);
+  });
+  
+  it('returns ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]', () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+  });
+});
